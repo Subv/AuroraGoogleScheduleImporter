@@ -1,0 +1,5 @@
+﻿* Allow the user to pick a color for each subject.
+* Allow the user to exclude subjects when importing to Google.
+* Add loading animations
+* Remove the MessageBox loop when retrieving subjects, and display them in a nicer way.
+* Perhaps write a WPF frontend?
