@@ -209,6 +209,8 @@ namespace AuroraGoogle
                         block.Location = location_td.FirstChild.InnerHtml;
 
                         var dates_string = location_td.NextSibling.NextSibling.FirstChild.InnerHtml.Split('-');
+                        // For some reason, some months are in spanish and others in english
+                        dates_string[0] = dates_string[0].Replace("Ene", "Jan");
                         block.StartDate = DateTime.Parse(dates_string[0].Trim());
 
                         while (block.StartDate.DayOfWeek != block.Day)

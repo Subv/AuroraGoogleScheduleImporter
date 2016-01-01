@@ -33,7 +33,7 @@ namespace AuroraGoogle
                 var start_date = new DateTime(block.StartDate.Year, block.StartDate.Month, block.StartDate.Day, block.StartHour.Hour, block.StartHour.Minute, block.StartHour.Second);
                 var end_hour = block.StartHour.Add(block.Duration);
                 var description = "Class in " + block.Location + " with " + subject.Professors;
-                var until = block.EndDate.Year.ToString() + block.EndDate.Month.ToString() + block.EndDate.Day.ToString("00") +
+                var until = block.EndDate.Year.ToString() + block.EndDate.Month.ToString("00") + block.EndDate.Day.ToString("00") +
                     "T" + end_hour.Hour.ToString("00") + end_hour.Minute.ToString("00") + end_hour.Second.ToString("00") + "Z";
                 var ev = new Event()
                 {
